@@ -128,7 +128,7 @@
                   v-model="zipcode"
                   :rules="streetRules"
                   :label="$t('account.zipcode')"
-                  prepend-icon="mdi-home"
+                  prepend-icon="mdi-post"
                   name="zipcode"
                   type="text"
                 />
@@ -141,7 +141,7 @@
                   v-model="city"
                   :rules="streetRules"
                   :label="$t('account.city')"
-                  prepend-icon="mdi-home"
+                  prepend-icon="mdi-city"
                   name="city"
                   type="text"
                 />
@@ -165,7 +165,7 @@
                   v-model="phone"
                   :rules="phoneRules"
                   :label="$t('account.phone')"
-                  prepend-icon="mdi-home"
+                  prepend-icon="mdi-cellphone"
                   name="phone"
                   type="text"
                 />
@@ -173,7 +173,7 @@
               <v-col>
                 <v-file-input
                   :label="$t('account.uploadImage')"
-                  filled
+                  show-size
                   prepend-icon="mdi-camera"
                 ></v-file-input>
               </v-col>
