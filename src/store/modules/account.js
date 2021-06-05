@@ -47,10 +47,21 @@ const actions = {
       new Error({ statusCode: 404, message: 'No Data' })
     }
   },
-  async submitUserData ({ commit, rootState, dispatch, state }, data) {
+  // async
+  submitUserData ({ dispatch }, data) {
     try {
       // update user data from API
-      await this.$axios.patch()
+      // await this.$axios.patch()
+      dispatch('alert/setSuccessMsg', 'account.updateSuccess', { root: true })
+    } catch (e) {
+      // eslint-disable-next-line no-new
+      new Error({ statusCode: 404, message: 'No Data' })
+    }
+  },
+  cancelModification ({ dispatch, commit }) {
+    try {
+      commit('cancelModification')
+      dispatch('alert/setInfoMsg', 'account.dataRollback', { root: true })
     } catch (e) {
       // eslint-disable-next-line no-new
       new Error({ statusCode: 404, message: 'No Data' })
@@ -59,6 +70,7 @@ const actions = {
 }
 
 export default {
+  namespaced: true,
   state,
   mutations,
   actions,

@@ -5,7 +5,7 @@
         lazy-src="https://picsum.photos/id/11/10/6"
         max-height="150"
         max-width="250"
-        src="https://picsum.photos/id/11/500/300"
+        :src="profileImage"
       ></v-img>
     </v-col>
     <v-col cols="8">
@@ -33,8 +33,11 @@ export default {
     firstname () {
       return this.$store.state.account.user.firstname
     },
-    lastname() {
+    lastname () {
       return this.$store.state.account.user.lastname
+    },
+    profileImage () {
+      return this.$store.state.account.user.profileImage
     }
   }
 }

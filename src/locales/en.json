@@ -7,15 +7,20 @@
     "male": "Male",
     "female": "Female",
     "birthday": "Birthday",
+    "dob": "Birthday",
     "street": "Street",
     "zipcode": "Zipcode",
     "city": "City",
     "country": "Country",
     "phone": "Phone",
     "uploadImage": "Upload profile image",
+    "profileImage": "Profile image",
     "age": "Age",
     "save": "Save",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "menu": "Menu",
+    "updateSuccess": "Successfully updated!",
+    "dataRollback": "Modification canceled!"
   },
   "auth": {
     "emailAlreadyExist": "An account with this email address already exists.",

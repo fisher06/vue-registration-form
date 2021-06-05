@@ -5,7 +5,7 @@
   >
   <app-header />
   <app-alert />
-  <v-row>
+  <v-row class="ma-0">
     <v-col cols="12">
       <app-account-info />
     </v-col>
@@ -32,7 +32,7 @@ export default {
     this.fetchData()
   },
   methods: {
-    ...mapActions(['fetchSourceData']),
+    ...mapActions('account', ['fetchSourceData']),
     fetchData () {
       this.fetchSourceData()
     }

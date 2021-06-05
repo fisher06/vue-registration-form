@@ -102,7 +102,7 @@
                   v-model="age"
                   :rules="ageRules"
                   :label="$t('account.age')"
-                  prepend-icon="mdi-email"
+                  prepend-icon="mdi-cake-layered"
                   name="age"
                   type="text"
                 />
@@ -154,7 +154,7 @@
                   v-model="country"
                   :items="countries"
                   :label="$t('account.country')"
-                  prepend-icon="mdi-face"
+                  prepend-icon="mdi-city"
                 />
               </v-col>
               <v-col
@@ -170,7 +170,9 @@
                   type="text"
                 />
               </v-col>
-              <v-col>
+              <v-col
+                cols="6"
+              >
                 <v-file-input
                   :label="$t('account.uploadImage')"
                   show-size
@@ -190,7 +192,7 @@
           </v-btn>
           <v-spacer />
           <v-btn
-            @click="submitUserData"
+            @click="submit"
             color="red"
             class="white--text"
           >
@@ -356,10 +358,13 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['setUserData', 'submitUserData', 'cancelModification']),
-    ...mapActions(['submitUserData']),
+    ...mapActions('account', ['submitUserData', 'cancelModification']),
+    ...mapMutations('account', ['setUserData']),
     saveDate (date) {
       this.$refs.dobMenu.save(date)
+    },
+    submit () {
+      this.submitUserData()
     }
   }
 }
