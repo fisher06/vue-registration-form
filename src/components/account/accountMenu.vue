@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="mx-auto"
+    class="mx-auto account-menu"
   >
     <v-list>
       <v-list-group
@@ -57,3 +57,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .account-menu {
+    & >>> .v-icon {
+      color: #f12239;
+    }
+    & >>> .mdi-menu::before {
+      color: #f12239;
+    }
+     & >>> .v-list-item__title {
+      color: #131313;
+    }
+  }
+</style>

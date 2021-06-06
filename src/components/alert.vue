@@ -1,21 +1,26 @@
 <template>
-  <div id="alert">
+  <div
+    id="alert"
+    class="alert-msg"
+  >
     <v-snackbar
       v-for="(message, i) in success "
       :key="i"
       v-model="success.length"
-      color="#4CAF50"
+      color="#f12239"
     >
       {{ message }}
-      <v-btn
-        @click="removeSuccess()"
-        dark
-        text
-      >
-        <v-icon>
-          mdi-close
-        </v-icon>
-      </v-btn>
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          text
+          v-bind="attrs"
+          @click="removeSuccess()"
+        >
+          <v-icon>
+            mdi-close
+          </v-icon>
+        </v-btn>
+      </template>
     </v-snackbar>
     <v-snackbar
       v-for="(message, i) in info "
@@ -24,15 +29,17 @@
       color="#2196F3"
     >
       {{ message }}
-      <v-btn
-        @click="removeInfo()"
-        dark
-        text
-      >
-        <v-icon>
-          mdi-close
-        </v-icon>
-      </v-btn>
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          text
+          v-bind="attrs"
+          @click="removeInfo()"
+        >
+          <v-icon>
+            mdi-close
+          </v-icon>
+        </v-btn>
+      </template>
     </v-snackbar>
   </div>
 </template>

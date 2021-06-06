@@ -1,8 +1,8 @@
 
 <template>
-  <v-row>
+  <v-row class="account-form">
     <v-col>
-      <v-card class="signup-form elevation-0">
+      <v-card class="user-form elevation-0">
         <v-card-text>
           <v-form
             ref="account"
@@ -24,7 +24,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="firstname"
               >
                 <v-text-field
@@ -38,7 +39,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="lastname"
               >
                 <v-text-field
@@ -52,7 +54,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="gender"
                 >
                 <v-select
@@ -64,7 +67,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="dob"
               >
                 <v-menu
@@ -95,7 +99,8 @@
                 </v-menu>
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="age"
               >
                 <v-text-field
@@ -108,7 +113,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="street"
               >
                 <v-text-field
@@ -121,7 +127,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="zipcode"
               >
                 <v-text-field
@@ -134,7 +141,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="city"
               >
                 <v-text-field
@@ -147,7 +155,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="country"
               >
                 <v-select
@@ -158,7 +167,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
                 v-if="phone"
               >
                 <v-text-field
@@ -171,7 +181,8 @@
                 />
               </v-col>
               <v-col
-                cols="6"
+                cols="12"
+                sm="6"
               >
                 <v-file-input
                   :label="$t('account.uploadImage')"
@@ -184,17 +195,20 @@
         </v-card-text>
         <v-card-actions>
           <v-btn
+            class="cancel-button"
             @click="cancelModification"
             text
-            small
+            outlined
+            min-width="100"
           >
             {{ $t('account.cancel') }}
           </v-btn>
           <v-spacer />
           <v-btn
+            class="save-button white--text"
             @click="submit"
             color="red"
-            class="white--text"
+            min-width="200"
           >
             {{ $t('account.save') }}
           </v-btn>
@@ -369,3 +383,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .account-form {
+    & >>> .v-input__prepend-outer .v-icon {
+      color: #f12239;
+    }
+  }
+</style>

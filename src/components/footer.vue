@@ -1,8 +1,9 @@
 
 <template>
   <v-footer
-    class="red lighten-1"
+    class="app-footer"
     padless
+    color="#f12239"
   >
     <v-col
       class="text-center"

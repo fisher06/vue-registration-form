@@ -7,11 +7,16 @@
   >
     <v-toolbar
       dense
-      class="red lighten-1"
+      color="#f12239"
     >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Title</v-toolbar-title>
+      <v-toolbar-title>
+        <v-img
+          max-height="48"
+          src="https://fr.eudonet.com/wp-content/uploads/2017/10/logo_eudonet.png"
+        />
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
