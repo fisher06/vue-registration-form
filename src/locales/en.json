@@ -23,13 +23,10 @@
     "dataRollback": "Modification canceled!"
   },
   "auth": {
-    "emailAlreadyExist": "An account with this email address already exists.",
     "passwordIsRequired": "This field is required.",
     "emailIsRequired": "This field is required.",
     "requiredField": "This field is required.",
     "emailMustBeValid": "Email must be valid!",
-    "passwordConfirmationIsrequired": "Password confirmation is required",
-    "passwordsAreNotSame": "Password are not same.",
     "nameMustLessThan12": "The name must be less than 12 characters",
     "ageMustBeNumber": "Age numbers must be numeric.",
     "dateMustBeValid": "Please enter a valid full date.",

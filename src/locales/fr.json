@@ -1,1 +1,36 @@
-{}
+{
+  "account": {
+    "email": "Email",
+    "firstname": "Prénom",
+    "lastname": "Nom de famille",
+    "gender": "Sexe",
+    "male": "Homme",
+    "female": "Femelle",
+    "birthday": "Date de naissance",
+    "dob": "Date de naissance",
+    "street": "Rue",
+    "zipcode": "Code postal",
+    "city": "Ville",
+    "country": "Pay",
+    "phone": "Téléphone",
+    "uploadImage": "Télécharger l'image de profil",
+    "profileImage": "Image de profil",
+    "age": "Âge",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "menu": "Menu",
+    "updateSuccess": "Mise à jour réussie !",
+    "dataRollback": "Modification annulée !"
+  },
+  "auth": {
+    "passwordIsRequired": "Ce champ est obligatoire.",
+    "emailIsRequired": "Ce champ est obligatoire.",
+    "requiredField": "Ce champ est obligatoire.",
+    "emailMustBeValid": "Veuillez saisir une adresse email valide.",
+    "nameMustLessThan12": "Le nom doit comporter moins de 12 caractères.",
+    "ageMustBeNumber": "L'âge doit être numérique.",
+    "dateMustBeValid": "Veuillez saisir une date complète valide. ",
+    "removeSpecialCharacters": "Merci de ne pas mettre de caractères spéciaux s'il vous plaît.",
+    "phoneMustBeNumber": "Les numéros de téléphone doivent être numériques uniquement."
+  }
+}

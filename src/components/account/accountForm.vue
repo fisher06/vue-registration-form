@@ -241,7 +241,6 @@ export default {
       streetRules: [
         v => /^[a-zA-Z0-9 '.ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøºÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž_-]*$/.test(v) || this.$i18n.t('auth.removeSpecialCharacters')
       ],
-      items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
       genders: [
         { value: 'male', text: this.$t('account.male') },
         { value: 'female', text: this.$t('account.female') }
