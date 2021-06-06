@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import vuetify from '@/plugins/vuetify' // path to vuetify export
-import i18n from './i18n'
+import i18n from '@/plugins/i18n'
 import store from './store/store'
 
 Vue.config.productionTip = false

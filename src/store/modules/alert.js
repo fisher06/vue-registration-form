@@ -1,4 +1,4 @@
-import i18n from '@/i18n.js'
+import i18n from '@/plugins/i18n.js'
 
 const state = {
   success: [],
