@@ -47,10 +47,15 @@ describe('alert.vue', () => {
     alertMoke.state.success = ['test success 1'];
     wrapper.vm.$nextTick(() => {
       expect(wrapper.html()).toContain(`<v-snackbar-stub `);
-      expect(wrapper.html()).toContain(`test success 1`);
+      expect(wrapper.html()).toContain(`test success 1`); 
     });
   })
 
+  it('Remove Success msg', () => {
+    wrapper.vm.removeSuccess();
+    expect(store.commit).toHaveBeenCalledWith("alert/removeSuccessMsg", undefined, undefined)
+  })
+    
   it('Info msg rendered', () => {
     alertMoke.state.success = [];
     alertMoke.state.info = ['test info 1'];
@@ -60,4 +65,8 @@ describe('alert.vue', () => {
     })
   })
 
+  it('Remove info msg', () => {
+    wrapper.vm.removeInfo();
+    expect(store.commit).toHaveBeenCalledWith("alert/removeInfoMsg", undefined, undefined)
+  })
 });

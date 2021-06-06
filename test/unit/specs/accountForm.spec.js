@@ -33,6 +33,7 @@ describe('accountForm.vue', () => {
     }
   });
   store.commit = jest.fn();
+  store.dispatch = jest.fn();
 
   const wrapper = shallowMount(AccountForm, {
     store, 
@@ -60,6 +61,20 @@ describe('accountForm.vue', () => {
     wrapper.vm.$nextTick(() => {
       expect(wrapper.html()).toContain(`Test last 2`);
     })
+  })
 
+  it('Date Save fun', () => {
+    wrapper.vm.$refs.dobMenu.save = jest.fn();
+    wrapper.vm.saveDate();
+    expect(wrapper.vm.$refs.dobMenu.save).toHaveBeenCalled();
+  })
+
+  it('Submit fun', () => {
+    wrapper.vm.submit();
+    expect(store.dispatch).toHaveBeenCalledWith("account/submitUserData", undefined)
+  })
+
+  it('Computed data', () => {
+    expect(wrapper.vm.phone).toBe("0667011512892")
   })
 });

@@ -59,14 +59,17 @@ describe('accountInfo.vue', () => {
   })
 
   it('User name updated', () => {
+    expect(wrapper.vm.firstname).toBe("Test first");
     accountMoke.state.user.firstname = "Test first 2";
     wrapper.vm.$nextTick(() => {
       expect(wrapper.html()).toContain(`Test first 2`);
+      expect(wrapper.vm.firstname).toBe("Test first 2");
     })
-
+    expect(wrapper.vm.lastname).toBe("Test last");
     accountMoke.state.user.lastname = "Test last 2";
     wrapper.vm.$nextTick(() => {
       expect(wrapper.html()).toContain(`Test last 2`);
+      expect(wrapper.vm.lastname).toBe("Test last 2");
     })
 
   })
