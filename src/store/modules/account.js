@@ -36,7 +36,7 @@ const mutations = {
 }
 
 const actions = {
-  async fetchSourceData ({ commit }, data) {
+  async fetchSourceData ({ commit }) {
     try {
       // get user data from API
       const res = await axios.get('/static/user.json')

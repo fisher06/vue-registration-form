@@ -48,11 +48,6 @@
 import { mapMutations } from 'vuex'
 
 export default {
-  data () {
-    return {
-      timeout: 6000
-    }
-  },
   computed: {
     success () {
       return this.$store.state.alert.success

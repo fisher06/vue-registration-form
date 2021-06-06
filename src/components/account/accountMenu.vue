@@ -52,8 +52,6 @@ export default {
     user () {
       return this.$store.state.account.user
     }
-  },
-  methods: {
   }
 }
 </script>
