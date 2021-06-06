@@ -24,7 +24,8 @@ describe('index.vue', () => {
 
   const wrapper = shallowMount(Index, {
     store, 
-    localVue 
+    localVue,
+    stubs: ['app-header', 'app-alert', 'app-account-info', 'app-footer']
   });
 
   it('snapshot', () => {
