@@ -205,6 +205,7 @@
           </v-btn>
           <v-spacer />
           <v-btn
+            :disabled="!valid"
             class="save-button white--text"
             @click="submit"
             color="red"
