@@ -12,7 +12,7 @@
             <v-row>
               <v-col
                 cols="12"
-                v-if="email"
+                v-if="'email' in user"
               >
                 <v-text-field
                   :label="$t('account.email') + ' *'"
@@ -26,7 +26,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="firstname"
+                v-if="'firstname' in user"
               >
                 <v-text-field
                   v-model="firstname"
@@ -41,7 +41,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="lastname"
+                v-if="'lastname' in user"
               >
                 <v-text-field
                   v-model="lastname"
@@ -56,7 +56,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="gender"
+                v-if="'gender' in user"
                 >
                 <v-select
                   v-model="gender"
@@ -69,7 +69,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="dob"
+                v-if="'dob' in user"
               >
                 <v-menu
                   ref="dobMenu"
@@ -101,7 +101,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="age"
+                v-if="'age' in user"
               >
                 <v-text-field
                   v-model="age"
@@ -115,7 +115,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="street"
+                v-if="'street' in user"
               >
                 <v-text-field
                   v-model="street"
@@ -129,7 +129,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="zipcode"
+                v-if="'zipcode' in user"
               >
                 <v-text-field
                   v-model="zipcode"
@@ -143,7 +143,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="city"
+                v-if="'city' in user"
               >
                 <v-text-field
                   v-model="city"
@@ -157,7 +157,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="country"
+                v-if="'country' in user"
               >
                 <v-select
                   v-model="country"
@@ -169,7 +169,7 @@
               <v-col
                 cols="12"
                 sm="6"
-                v-if="phone"
+                v-if="'phone' in user"
               >
                 <v-text-field
                   v-model="phone"
@@ -257,6 +257,9 @@ export default {
     }
   },
   computed: {
+    user () {
+      return this.$store.state.account.user
+    },
     email () {
       return this.$store.state.account.user.email
     },
