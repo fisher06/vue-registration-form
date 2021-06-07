@@ -20,7 +20,7 @@
       class="profile-name"
     >
       <p
-        v-if="firstname && lastname"
+        v-if="firstname || lastname"
       >
         {{ firstname + ' ' + lastname }}
       </p>
